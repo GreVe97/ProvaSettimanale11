@@ -89,12 +89,12 @@ export default function ListaTracceArtista() {
                   {Math.floor(ele.duration / 60)}:{ele.duration % 60}{" "}
                   <a className="cuoricino manina mb-5">
                     {!preferiti.includes(ele.id) ? (
-                      <i class="bi bi-suit-heart"
+                      <i className="bi bi-suit-heart"
                         onClick={() => {dispatch(aggiungiPreferiti(ele.id))}}
                       ></i>
                     ) : (
                       <i
-                        class="bi bi-heart-fill"
+                        className="bi bi-heart-fill"
                         onClick={() => dispatch(togliPreferiti(ele.id))}
                       ></i>
                     )}

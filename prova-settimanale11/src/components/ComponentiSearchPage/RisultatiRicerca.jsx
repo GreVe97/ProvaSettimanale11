@@ -27,7 +27,7 @@ export default function RisultatiRicerca() {
 
   return (
     <>
-      <p>Prova</p>
+   
       {risultatiRicerca.length && (
         <>
           <div className="container risultatiRicerca row mt-2">

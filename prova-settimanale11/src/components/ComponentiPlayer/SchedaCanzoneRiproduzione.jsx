@@ -1,9 +1,13 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { UseDispatch } from "react-redux";
+import { aggiungiPreferiti,togliPreferiti } from "../../slice/preferitiSlice";
 
 export default function SchedaCanzoneRiproduzione() {
+    const dispatch = useDispatch()
   const navigate = useNavigate();
+  let preferiti = useSelector(state=> state.preferiti.preferiti)
 
   const canzone = useSelector((state) => state.inRiproduzione.inRiproduzione);
   const play = useSelector((state) => state.inRiproduzione.play);
@@ -45,9 +49,18 @@ export default function SchedaCanzoneRiproduzione() {
           </span>
         </a>
       </div>
-      <a className="d-flex align-items-center cuoricino">
-        <i className="bi bi-heart"></i>
-      </a>
+      <a className="cuoricino manina mb-5">
+                    {!preferiti.includes(canzone.id) ? (
+                      <i className="bi bi-suit-heart"
+                        onClick={() => {dispatch(aggiungiPreferiti(canzone.id))}}
+                      ></i>
+                    ) : (
+                      <i
+                        className="bi bi-heart-fill"
+                        onClick={() => dispatch(togliPreferiti(canzone.id))}
+                      ></i>
+                    )}
+                  </a>
     </div>
   );
 }
