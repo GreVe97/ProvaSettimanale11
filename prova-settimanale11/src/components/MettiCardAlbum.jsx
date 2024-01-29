@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom'
 export default function MettiCardAlbum({ traccia }) {
   const navigate = useNavigate();
   return (
-    <div className="card" style={{ width: "22%" }} onClick={()=>navigate(`/album/${traccia.album.id}`)}>
+    <div className="card mb-3" style={{ width: "22%" }} onClick={()=>navigate(`/album/${traccia.album.id}`)}>
       <a className="">
         <img src={traccia.album.cover_medium} className="card-img-top " alt="..." />
       </a>
