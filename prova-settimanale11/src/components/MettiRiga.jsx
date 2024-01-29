@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getTracks } from '../slice/rigaSlice';
 import { useEffect } from 'react';
 import { sottoArray } from '../api/api';
-import { Link } from 'react-router-dom';
 import MettiCardAlbum from './MettiCardAlbum';
 
 const titoloRiga = ["Artisti belli", "Album Belli", "Album Bellissimi"]

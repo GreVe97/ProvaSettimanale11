@@ -456,7 +456,7 @@ input[type=range]:focus::-moz-range-thumb {
   bottom: 0.3rem;
   border: 1px solid black;
   border-radius: 50%;
-  cursor: pointer;
+ 
   background-color: #1ED760;
   position: absolute;
 }
@@ -501,7 +501,7 @@ input[type=range]:focus::-moz-range-thumb {
   padding-left: 0.1rem;
   border: none;
   border-radius: 50%;
-  cursor: pointer;
+
   background-color: #1ED760;
   display: none;
 }
@@ -509,7 +509,7 @@ input[type=range]:focus::-moz-range-thumb {
   font-size: 1.5rem;
 }
 .centroFelipe .card:hover .playHover {
-  cursor: pointer;
+ 
   display: block;
 }
 .centroFelipe .playHover:hover {
@@ -526,7 +526,7 @@ input[type=range]:focus::-moz-range-thumb {
   padding-left: 0.5rem;
   border: none;
   border-radius: 50%;
-  cursor: pointer;
+
   background-color: #1ED760;
   display: none;
 }
@@ -534,7 +534,7 @@ input[type=range]:focus::-moz-range-thumb {
   font-size: 1.5rem;
 }
 .centroFelipe .card:hover .playHoverLongCard {
-  cursor: pointer;
+
   display: block;
 }
 .centroFelipe .playHoverLongCard:hover {
@@ -544,7 +544,7 @@ input[type=range]:focus::-moz-range-thumb {
   transform: scale(1.1);
 }
 .centroFelipe .card:hover {
-  cursor: pointer;
+
   background-color: #282828;
 }
 
@@ -1228,13 +1228,14 @@ body {
   /* Altre regole CSS specifiche per larghezza inferiore a 1278px */
 }
 /* Stile della scrollbar */
+::-webkit-scrollbar,
 .centroLeo::-webkit-scrollbar,
 .centroFelipe::-webkit-scrollbar,
 .commenti::-webkit-scrollbar {
   width: 4px;
   /* Larghezza della scrollbar */
 }
-
+::-webkit-scrollbar-thumb,
 .centroLeo::-webkit-scrollbar-thumb,
 .centroFelipe::-webkit-scrollbar-thumb,
 .commenti::-webkit-scrollbar-thumb {
@@ -1250,6 +1251,7 @@ body {
 }
 
 /* Stile della traccia (la parte fissa) della scrollbar */
+::-webkit-scrollbar-track,
 .centroLeo::-webkit-scrollbar-track,
 .centroFelipe::-webkit-scrollbar-track,
 .commenti::-webkit-scrollbar-track {
@@ -1260,9 +1262,18 @@ body {
 }
 
 /* Cambia lo stile della scrollbar quando è attiva (quando l'utente la sta trascinando) */
+::-webkit-scrollbar-thumb:active,
 .centroLeo::-webkit-scrollbar-thumb:active,
 .centroFelipe::-webkit-scrollbar-thumb:active,
 .commenti::-webkit-scrollbar-thumb:active {
   background-color: #555;
   /* Cambia il colore del pollice quando è attivo */
+}
+
+.manina{
+  cursor:pointer;
+}
+.manina:hover{
+
+  color: #148A0A !important;
 }

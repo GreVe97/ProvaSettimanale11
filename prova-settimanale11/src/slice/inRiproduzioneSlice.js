@@ -1,7 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-    inRiproduzione: {}
+    inRiproduzione: {},
+    play:false,
 }; 
 
 const inRiproduzione_slice = createSlice(
@@ -11,7 +12,10 @@ const inRiproduzione_slice = createSlice(
         reducers: {
             riproduci(state, action) {
                 if(state.id!=action.payload.id){
-                    state = {...action.payload}
+                    state.inRiproduzione = {...action.payload};
+                    state.play=true;
+                }else{
+                    state.play=false;
                 }
             },
         }

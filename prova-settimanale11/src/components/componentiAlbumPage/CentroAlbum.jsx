@@ -9,12 +9,14 @@ import DatiTracce from './DatiTracce';
 import ListaTracce from './ListaTracce';
 
 export default function CentroAlbum() {
+  console.log(useParams());
 
   const [id, setId] = useState(useParams());
   const dispatch = useDispatch();
   const chiamataAlbum = useSelector(state => state.chiamataAlbum.chiamataAlbum);
   const loading = useSelector(state => state.chiamataAlbum.loading);
   const error = useSelector(state => state.chiamataAlbum.error);
+  
 
   useEffect(() => {
     dispatch(getAlbumTracks(id));

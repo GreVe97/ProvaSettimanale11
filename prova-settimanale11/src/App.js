@@ -8,6 +8,7 @@ import Albumpage from './pages/Albumpage';
 import Searchpage from './pages/Searchpage';
 import ColonnaDx from './components/ColonnaDx'
 import ColonnaSx from './components/ColonnaSx'
+import Player from './components/ComponentiPlayer/Player';
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
               <Route path="*" element={< NotFoundPage />} />
             </Routes>
             <ColonnaDx />
+            <Player/>
           </div>
         </div>
       </BrowserRouter>
